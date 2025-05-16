@@ -104,8 +104,32 @@
         align-items: stretch;
       }
     }
-  </style>
-<style>
+      .hommus-widget {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      animation: pulse 1s infinite ease-in-out;
+      text-align: center;
+    }
+
+    .hommus-widget img {
+      width: 60px;
+      height: 60px;
+      border: 2px outset #888;
+    }
+
+    .hommus-widget p {
+      color: #ffcc99;
+      font-size: 10px;
+      margin-top: 4px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
     #welcome-overlay {
       position: fixed;
       top: 0;
@@ -120,7 +144,7 @@
       align-items: center;
       z-index: 9999;
       font-size: 18px;
-      padding: 10px;
+      padding: 20px;
     }
     #welcome-overlay button {
       margin-top: 20px;
@@ -132,7 +156,34 @@
       font-family: 'Times New Roman', serif;
       cursor: pointer;
     }
-  </style>
+      .hommus-widget {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      animation: pulse 1s infinite ease-in-out;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .hommus-widget img {
+      width: 60px;
+      height: 60px;
+      border: 2px outset #888;
+      cursor: pointer;
+    }
+
+    .hommus-widget p {
+      color: #ffcc99;
+      font-size: 10px;
+      margin-top: 4px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    </style>
   <script>
     window.addEventListener('load', function () {
       const overlay = document.createElement('div');
@@ -188,5 +239,25 @@
     <b>Last Updated:</b> 11/06/96<br>
     The design of <a href="#">this homepage</a> is best enhanced by using Netscape</p>
   </div>
+  <div class="hommus-widget">
+    <a href="https://example.com/hommus-recipe" target="_blank">
+      <img src="images/hommus.png" alt="Hommus Recipe">
+    </a>
+    <p>Click for our sacred hommus recipe</p>
+  </div>
+<script>
+  const hommus = document.querySelector('.hommus-widget');
+  const img = hommus.querySelector('img');
+  img.addEventListener('mouseenter', () => {
+    const maxX = window.innerWidth - hommus.offsetWidth;
+    const maxY = window.innerHeight - hommus.offsetHeight;
+    const newX = Math.floor(Math.random() * maxX);
+    const newY = Math.floor(Math.random() * maxY);
+    hommus.style.left = newX + 'px';
+    hommus.style.top = newY + 'px';
+    hommus.style.right = 'auto';
+    hommus.style.bottom = 'auto';
+  });
+</script>
 </body>
 </html>
