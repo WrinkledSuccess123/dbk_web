@@ -33,11 +33,18 @@
       margin-bottom: 20px;
     }
 
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
     .bio {
       border: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 20px;
       padding: 15px;
       background-color: #111;
+      max-width: 280px;
+      margin: 0 auto;
     }
 
     .bio img {
@@ -58,30 +65,38 @@
       font-size: 14px;
       color: #ffcc99;
     }
+
+    @media (max-width: 600px) {
+      .bio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Meet The Buzzkills</h1>
   <div class="content-box">
-    <div class="bio">
-      <img src="images/maxwell.jpg" alt="Band Member 1">
-      <h2>Maxwell "Cum Guzzler" Adair</h2>
-      <p>Lead guitarist and part-time philosopher. Enjoys feedback, constructive or otherwise.</p>
-    </div>
-    <div class="bio">
-      <img src="images/olly.jpg" alt="Band Member 2">
-      <h2>Orlando "Cum Guzzler" Deluca</h2>
-      <p>Drummer, herbal tea enthusiast, and self-proclaimed fish theorist.</p>
-    </div>
-    <div class="bio">
-      <img src="images/jack.jpg" alt="Band Member 3">
-      <h2>Jack "Cum Guzzler" Larkin</h2>
-      <p>Bass player, keeper of keys and grounds at Hogwarts.</p>
-    </div>
-    <div class="bio">
-      <img src="images/hudson.jpg" alt="Band Member 4">
-      <h2>Hudson "Cum" Adair</h2>
-      <p>Amateur beekeeper. Has never lost a staring contest.</p>
+    <div class="bio-grid">
+      <div class="bio">
+        <img src="images/maxwell.jpg" alt="Band Member 1">
+        <h2>Maxwell "Cum Guzzler" Adair</h2>
+        <p>Lead guitarist and part-time philosopher. Enjoys feedback, constructive or otherwise.</p>
+      </div>
+      <div class="bio">
+        <img src="images/olly.jpg" alt="Band Member 2">
+        <h2>Orlando "Cum Guzzler" Deluca</h2>
+        <p>Drummer, herbal tea enthusiast, and self-proclaimed fish theorist.</p>
+      </div>
+      <div class="bio">
+        <img src="images/jack.jpg" alt="Band Member 3">
+        <h2>Jack "Cum Guzzler" Larkin</h2>
+        <p>Bass player, keeper of keys and grounds at Hogwarts.</p>
+      </div>
+      <div class="bio">
+        <img src="images/hudson.jpg" alt="Band Member 4">
+        <h2>Hudson "Cum" Adair</h2>
+        <p>Amateur beekeeper. Has never lost a staring contest.</p>
+      </div>
     </div>
   </div>
   <p><a href="index.html">Return to Homepage</a></p>
