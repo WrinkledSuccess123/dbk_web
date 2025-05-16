@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dandy Buzzkills: Pictures</title>
+  <style>
+    body {
+      background-color: black;
+      color: #ffcc99;
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    a {
+      color: yellow;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .content-box {
+      border: 12px outset #888888;
+      margin: 0 auto;
+      width: 95%;
+      max-width: 900px;
+      background-color: black;
+      padding: 20px;
+    }
+
+    h1 {
+      color: yellow;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .grid img {
+      width: 100%;
+      height: auto;
+      border: 2px solid white;
+      box-sizing: border-box;
+    }
+  .lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border: 4px solid white;
+  background: black;
+  box-shadow: 0 0 20px black;
+  box-sizing: border-box;
+  image-rendering: auto;
+}
+</style>
+</head>
+<body>
+  <h1>The Dandy Buzzkills: Pictures</h1>
+  <div class="content-box">
+    <div class="grid" id="photo-grid"></div>
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Expanded image">
+</div>
+      <!-- Images will be added by JavaScript -->
+    </div>
+  </div>
+  <p><a href="index.html">Return to Homepage</a></p>
+
+  <script>
+    const grid = document.getElementById('photo-grid');
+    let index = 1;
+    const maxPics = 100; // hard limit to prevent infinite loops
+
+    function tryAddImage(i) {
+      const img = new Image();
+      img.src = `images/pic${i}.jpg`;
+      img.onload = () => {
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+  grid.appendChild(img);
+};
+      img.onerror = () => {};
+    }
+
+    while (index <= maxPics) {
+      tryAddImage(index);
+      index++;
+    }
+  </script>
+<script>
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+</script>
+</body>
+</html>
