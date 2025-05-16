@@ -67,10 +67,27 @@
     }
 
     @media (max-width: 600px) {
-      .bio-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+  .bio-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-box {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .content-box > div {
+    width: 100%;
+    max-width: 100%;
+  }
+  .bio {
+    width: 100%;
+    max-width: 100%;
+  }
+  .bio img {
+    width: 100%;
+    height: auto;
+  }
+}
+    
   </style>
 </head>
 <body>
