@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dandy Buzzkills Homepage</title>
+  <style>
+    body {
+      background-color: black;
+      color: #ffcc99;
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+    }
+
+    a {
+      color: yellow;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px ridge #666666;
+      margin: 20px auto;
+      width: 90%;
+    }
+
+    .content-box {
+      border: 12px outset #888888;
+      margin: 0 auto;
+      width: 95%;
+      max-width: 660px;
+      background-color: black;
+      padding: 10px;
+    }
+
+    .nav-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nav-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-item {
+      flex: 1;
+      font-size: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      color: yellow;
+    }
+
+    .nav-image {
+      flex: 2;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px;
+    }
+
+    .nav-image img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+    }
+
+    .highlight {
+      font-size: 28px;
+      color: yellow;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      font-style: italic;
+      color: #996666;
+    }
+
+    .visitor-count {
+      color: #00ffff;
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 12px;
+      margin-top: 20px;
+      color: white;
+    }
+
+    .image-center {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #fff;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 600px) {
+      .nav-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2><i>Welcome to:<br><span class="highlight">The Dandy Buzzkills</span><br>Homepage</i></h2>
+
+  <hr>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 95%; margin: 0 auto; flex-wrap: wrap; gap: 10px;">
+    <img src="images/banana.gif" alt="Banana Left" width="40" height="40">
+    <p style="margin: 0;">You're visitor # <span class="visitor-count">
+      <script type="text/javascript" src="https://counter.websiteout.com/js/2/4/12/0"></script>
+    </span><br>since February 17, 1996</p>
+    <img src="images/banana.gif" alt="Banana Right" width="40" height="40">
+  </div>
+
+  <hr>
+
+  <div class="content-box">
+    <div class="nav-grid">
+      <div class="nav-row">
+        <div class="nav-item"><a href="#"><span>B</span>iography</a></div>
+        <div class="nav-image"><img src="images/banner.jpg" alt="The Dandy Buzzkills"></div>
+        <div class="nav-item"><a href="#"><span>P</span>ictures</a></div>
+      </div>
+      <div class="nav-row">
+        <div class="nav-item"><a href="#"><span>M</span>usic</a></div>
+        <div class="nav-item"><a href="#"><span>L</span>inks</a></div>
+        <div class="nav-item"><a href="#"><span>C</span>ontact <span>L</span>ist</a></div>
+      </div>
+    </div>
+  </div>
+
+  <p><a href="#">Upcoming Gigs</a><br>Compiled by The Dandy Buzzkills</p>
+
+  <hr>
+
+  <div class="footer">
+    <p>© The Dandy Buzzkills 1996-2025<br>
+    <b>Creation Date:</b> July 15, 1995<br>
+    <b>Last Updated:</b> 11/06/96<br>
+    The design of <a href="#">this homepage</a> is best enhanced by using Netscape</p>
+  </div>
+</body>
+</html>
