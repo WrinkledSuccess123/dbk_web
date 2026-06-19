@@ -1,0 +1,185 @@
+```css
+/* styles/ep.css */
+
+.ep-header {
+  text-align: center;
+  margin: 15px auto 10px;
+}
+
+.ep-header h1 {
+  font-size: 46px;
+  margin: 8px 0;
+  color: yellow;
+  text-shadow: 2px 2px #660000;
+}
+
+.kicker {
+  color: #00ffff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.lead {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.date {
+  color: white;
+  font-size: 14px;
+}
+
+.blink {
+  animation: blink 0.8s step-start infinite;
+  color: yellow;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.ep-main {
+  width: min(95%, 900px);
+  padding: 18px;
+}
+
+.ep-top {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.cover-wrap {
+  text-align: center;
+}
+
+.ep-cover {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border: 4px ridge white;
+  background: #111;
+}
+
+.caption {
+  font-size: 12px;
+  color: white;
+  margin: 6px 0 0;
+}
+
+.ep-info {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.ep-info h2,
+.track-section h2,
+.ep-lore h2,
+.credits h2 {
+  color: yellow;
+  text-align: center;
+  margin-top: 0;
+}
+
+.listen-box {
+  border: 3px double #666;
+  background: #111;
+  text-align: center;
+  padding: 10px;
+  margin-top: 16px;
+}
+
+.track-section {
+  text-align: center;
+}
+
+.small-warning {
+  color: white;
+  font-size: 13px;
+  margin-top: -5px;
+}
+
+.track-list {
+  list-style-position: inside;
+  padding: 0;
+  margin: 18px auto;
+  max-width: 620px;
+  text-align: left;
+}
+
+.track-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border: 2px inset #666;
+  background: #111;
+  padding: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.track-title {
+  color: yellow;
+  font-weight: bold;
+}
+
+.track-time {
+  color: #00ffff;
+  white-space: nowrap;
+}
+
+.ep-lore {
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.credits {
+  max-width: 520px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.credits ul {
+  list-style-type: square;
+  padding-left: 25px;
+}
+
+.official-stamp {
+  width: fit-content;
+  max-width: 90%;
+  margin: 25px auto 5px;
+  padding: 8px 14px;
+  border: 4px double red;
+  color: red;
+  font-weight: bold;
+  transform: rotate(-3deg);
+  background: #111;
+  font-size: 18px;
+}
+
+.return-link {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .ep-top {
+    grid-template-columns: 1fr;
+  }
+
+  .ep-info {
+    text-align: center;
+  }
+
+  .track-list li {
+    font-size: 16px;
+  }
+
+  .ep-header h1 {
+    font-size: 36px;
+  }
+}
+```
