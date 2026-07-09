@@ -55,10 +55,54 @@
   box-sizing: border-box;
 }
 
+.tour-button-wrap {
+  text-align: center;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.tour-button {
+  display: inline-block;
+  padding: 18px 44px;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-decoration: none;
+  color: yellow;
+  background: #b00000;
+  border: 6px ridge yellow;
+  box-shadow: 0 0 0 4px black, 8px 8px 0 black;
+  text-shadow: 3px 3px 0 black;
+  transform: rotate(-2deg);
+  animation: tour-flash 0.8s infinite alternate;
+}
+
+.tour-button:hover {
+  color: #b00000;
+  background: yellow;
+  border-color: #b00000;
+  transform: rotate(2deg) scale(1.08);
+}
+
+@keyframes tour-flash {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.4);
+  }
+}
+
 @media (max-width: 600px) {
   .nav-row {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .tour-button {
+    font-size: 32px;
+    padding: 16px 32px;
+    letter-spacing: 3px;
   }
 }
 
@@ -68,6 +112,17 @@
   .nav-image { padding: 8px; }
   .highlight { font-size: 22px; }
   .visitor-count { font-size: 14px; }
+
+  .tour-button-wrap {
+    margin-top: 22px;
+  }
+
+  .tour-button {
+    font-size: 26px;
+    padding: 14px 24px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 0 3px black, 5px 5px 0 black;
+  }
 
   /* Make hommus widget less intrusive on small screens */
   .hommus-widget { position: fixed; right: 12px; bottom: 12px; }
